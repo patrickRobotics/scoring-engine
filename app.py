@@ -97,7 +97,7 @@ def check_score(token):
             return jsonify({
                 "id": id,
                 "customerNumber": result['customer_number'],
-                "error": "Scporing Failed!"
+                "error": "Scoring Failed!"
             }), 400
         return jsonify({
             "id": id,
@@ -158,7 +158,7 @@ def calculate_score(transactions):
     if not transactions:
         return 300  # Minimum score if no transactions
 
-    # Example scoring logic - adjust based on your requirements
+    # Example scoring logic
     total_value = sum(t.get('transactionValue', 0) for t in transactions)
     avg_value = total_value / len(transactions)
 
