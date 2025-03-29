@@ -21,8 +21,10 @@ TOKEN_EXPIRY = os.getenv('TOKEN_EXPIRY')  # 5 minutes in seconds
 pending_scores = {}
 completed_scores = {}
 registered_clients = {}
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
 users = {
-    "admin": generate_password_hash("pwd123")
+    USERNAME: generate_password_hash(PASSWORD)
 }
 
 
